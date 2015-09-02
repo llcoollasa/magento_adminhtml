@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<layout>
+
+    <!--
+    method 1
+    http://local.m14.com/index.php/adminsection/adminhtml_brand_index/index/
+    -->
+    
+    <ns_adminsection_admin_adminhtml_index_index>
+        <reference name="content">
+            <block type="core/template" name="ns.grid" template="ns/adminsection/grid.phtml" />
+        </reference>
+    </ns_adminsection_admin_adminhtml_index_index>
+
+
+    <ns_adminsection_admin_adminhtml_brand_index_index>
+        <reference name="content">
+            <block type="core/template" name="ns.grid" template="ns/adminsection/index.phtml" />
+        </reference>
+    </ns_adminsection_admin_adminhtml_brand_index_index>
+    
+    <!--
+    method 2
+    http://local.m14.com/index.php/admin/brand_index/index/
+    -->
+
+    <adminhtml_index_index>
+        <reference name="content">
+            <block type="core/template" name="ns.grid" template="ns/adminsection/index.phtml" />
+        </reference>
+    </adminhtml_index_index>
+
+    <adminhtml_brand_index>
+        <reference name="content">
+            <block  type="ns_adminsection/adminhtml_brand" name="adminsection.brand.grid" />
+        </reference>
+    </adminhtml_brand_index>
+
+    <adminhtml_brand_grid>
+        <reference name="root">
+            <block type="ns_adminsection/adminhtml_brand_grid" name="root"  />
+        </reference>
+    </adminhtml_brand_grid>
+
+    <!--<adminhtml_brand_edit>-->
+        <!--<reference name="root">-->
+            <!--<block type="ns_adminsection/adminhtml_brand_grid" name="root" output="toHtml" />-->
+        <!--</reference>-->
+    <!--</adminhtml_brand_edit>-->
+
+    <!--<adminhtml_brand_list>-->
+        <!--<reference name="content">-->
+            <!--<block type="ns_adminsection/adminhtml_brand_grid" name="ns.adminsection.list"/>-->
+        <!--</reference>-->
+    <!--</adminhtml_brand_list>-->
+
+    <!--<adminhtml_brand_grid>-->
+        <!--<block  type="ns_adminsection/adminhtml_brand_grid" name="adminsection.brand.grid" output="toHtml"/>-->
+    <!--</adminhtml_brand_grid>-->
+
+    <adminhtml_brand_edit>
+        <reference name="left">
+            <block type="ns_adminsection/adminhtml_brand_edit_tabs" name="adminsection.brand.tabs" />
+        </reference>
+        <reference name="content">
+            <block type="ns_adminsection/adminhtml_brand_edit" name="adminsection.brand.form" />
+        </reference>
+    </adminhtml_brand_edit>
+
+</layout>

@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <ns_adminsection_tab translate="label" module="ns_adminsection">
+            <label><![CDATA[<div style="position: absolute;height:50px"><img id="magepal_block" src="" alt="" border="0" style="height:18px"/></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Admin section&nbsp;<script>$('magepal_block').src = SKIN_URL + "images/success-msg.png";</script>]]></label>
+            <sort_order>200</sort_order>
+        </ns_adminsection_tab>
+    </tabs>
+
+    <sections>
+        <ns_adminsection translate="label" module="ns_adminsection">
+            <label>Administration</label>
+            <sort_order>10</sort_order>
+            <tab>ns_adminsection_tab</tab>
+            <show_in_default>1</show_in_default>
+            <show_in_store>1</show_in_store>
+            <show_in_website>1</show_in_website>
+
+            <groups>
+                <ns_general translate="label" module="ns_adminsection">
+                    <label>General</label>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_store>1</show_in_store>
+                    <show_in_website>1</show_in_website>
+                    <fields>
+                        <ns_general_text translate="label comment" module="ns_adminsection">
+                            <label>Enter the name</label>
+                            <comment><![CDATA[<b>Comment goes here</b>]]></comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <show>1</show>
+                            </depends>
+                        </ns_general_text>
+                        <show translate="label" module="ns_adminsection">
+                            <label>Display text</label>
+                            <comment><![CDATA[<marquee>Some comment lines</marquee>]]></comment>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <tooltip>Javascript here</tooltip>
+                        </show>
+                    </fields>
+                </ns_general>
+            </groups>
+        </ns_adminsection>
+    </sections>
+
+</config>

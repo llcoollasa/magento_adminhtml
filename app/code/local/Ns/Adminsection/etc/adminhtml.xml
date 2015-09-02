@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<config>
+
+    <!-- default admin routing -->
+    <menu>
+        <adminsection translate="title" module="ns_adminsection">
+            <title>Admin Section</title>
+            <sort_order>15</sort_order>
+            <children>
+
+                <!-- Best Practice -->
+                <!--<adminsection_index translate="title" module="ns_adminsection">-->
+                    <!--<title>Admin Index</title>-->
+                    <!--<sort_order>15</sort_order>-->
+                    <!--<action>adminsection/adminhtml_index/index</action>-->
+                <!--</adminsection_index>-->
+                <!--<adminsection_brand translate="title" module="ns_adminsection">-->
+                    <!--<title>Brand</title>-->
+                    <!--<sort_order>15</sort_order>-->
+                    <!--<action>adminsection/adminhtml_brand_index</action>-->
+                <!--</adminsection_brand>-->
+
+                <!-- Standard -->
+                <adminsection_index translate="title" module="ns_adminsection">
+                    <title>Admin Index</title>
+                    <sort_order>15</sort_order>
+                    <action>adminhtml/index</action>
+                </adminsection_index>
+                <adminsection_brand translate="title" module="ns_adminsection">
+                    <title>Brand</title>
+                    <sort_order>15</sort_order>
+                    <action>adminhtml/brand</action>
+                </adminsection_brand>
+            </children>
+        </adminsection>
+    </menu>
+
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <ns_adminsection>
+                                        <title>Store Hello World Module Section</title>
+                                    </ns_adminsection>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+                <children>
+                    <adminsection>
+                        <title>Admin Section</title>
+                        <sort_order>15</sort_order>
+                        <children>
+                            <adminsection_index translate="title" module="widget">
+                                <title>Admin Index</title>
+                                <sort_order>15</sort_order>
+                            </adminsection_index>
+                            <adminsection_brand translate="title" module="widget">
+                                <title>Brand</title>
+                                <sort_order>15</sort_order>
+                            </adminsection_brand>
+                        </children>
+                    </adminsection>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+
+
+
+</config>

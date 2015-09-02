@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Ns_Adminsection>
+            <version>0.0.1</version>
+        </Ns_Adminsection>
+    </modules>
+
+    <global>
+
+        <blocks>
+            <ns_adminsection>
+                <class>Ns_Adminsection_Block</class>
+            </ns_adminsection>
+        </blocks>
+
+        <helpers>
+            <ns_adminsection>
+                <class>Ns_Adminsection_Helper</class>
+            </ns_adminsection>
+        </helpers>
+
+        <models>
+            <ns_adminsection>
+                <class>Ns_Adminsection_Model</class>
+                <resourceModel>ns_adminsection_resource</resourceModel>
+            </ns_adminsection>
+
+            <ns_adminsection_resource>
+                <class>Ns_Adminsection_Model_Resource</class>
+                    <entities>
+                        <brand>
+                            <table>brand</table>
+                        </brand>
+                    </entities>
+            </ns_adminsection_resource>
+        </models>
+
+        <resources>
+            <ns_adminsection_setup>
+                <setup>
+                    <module>Ns_Adminsection</module>
+                    <class>Mage_Core_Model_Resource_Setup</class>
+                </setup>
+            </ns_adminsection_setup>
+        </resources>
+
+    </global>
+
+    <!-- Best Practice  -->
+    <!--<admin>-->
+        <!--<routers>-->
+            <!--<ns_adminsection_admin>-->
+                <!--<use>admin</use>-->
+                <!--<args>-->
+                    <!--<module>Ns_Adminsection</module>-->
+                    <!--<frontName>adminsection</frontName>-->
+                <!--</args>-->
+            <!--</ns_adminsection_admin>-->
+        <!--</routers>-->
+    <!--</admin>-->
+
+    <!-- Standard  -->
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <adminsection before="Mage_Adminhtml">Ns_Adminsection_Adminhtml</adminsection>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <ns_adminsection>
+                    <file>ns/adminsection/ns_adminsection.xml</file>
+                </ns_adminsection>
+            </updates>
+        </layout>
+    </adminhtml>
+
+
+</config>

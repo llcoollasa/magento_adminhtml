@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<widgets>
+    <ns_adminsection_brand type="ns_adminsection/brand">
+        <name>Brands</name>
+        <description type="desc">Lists the brands</description>
+    </ns_adminsection_brand>
+</widgets>
